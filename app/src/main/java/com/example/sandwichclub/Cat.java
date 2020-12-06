@@ -13,9 +13,11 @@ public class Cat {
     public int color; // цвет
 
     // Конструктор
-    public Cat(){
+    public Cat(MainActivity mainActivity){
         String jsonText = "{\"name\":\"Мурзик\",\"color\":-16777216,\"age\":9}";
-
+        name = "Hui";
+        age = 20;
+        color = Color.YELLOW;
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         Cat murzik = gson.fromJson(jsonText, Cat.class);
